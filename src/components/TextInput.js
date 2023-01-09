@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../styles/TextInput.modul.css';
+import classes from '../styles/TextInput.module.css';
 
 export default function TextInput({ icon, ...rest }) {
   return (

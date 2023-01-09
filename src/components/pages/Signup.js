@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from '../../styles/Signup.module.css';
+import Button from '../Button';
 import Checkbox from '../Checkbox';
 import Form from '../Form';
 import Illustration from '../Illustration';
@@ -17,6 +18,10 @@ export default function Signup() {
           <TextInput type="password" placeholder="Enter password" icon="lock" />
           <TextInput type="password" placeholder="Confirm password" icon="lock_clock" />
           <Checkbox text="I agree to the Terms & Conditions" />
+          <Button> Submit Now</Button>
+          <div className="info">
+            Already have an account? <a href="login.html">Login</a> instead.
+          </div>
         </Form>
       </div>
     </>
