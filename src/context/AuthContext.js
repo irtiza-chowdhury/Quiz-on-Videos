@@ -12,7 +12,7 @@ import '../firebase';
 
 const AuthContext = React.createContext();
 export function useAuth() {
-  useContext(AuthContext);
+  return useContext(AuthContext);
 }
 
 export function AuthProvider({ children }) {

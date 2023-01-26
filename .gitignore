@@ -8,6 +8,8 @@
 # testing
 /coverage
 /html
+/database
+/original
 
 # production
 /build
