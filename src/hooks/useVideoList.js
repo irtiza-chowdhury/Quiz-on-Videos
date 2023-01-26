@@ -20,12 +20,10 @@ export default function useVideoList(page) {
 
         if (snapshot.exists()) {
           setVideos((prevVideos) => [...prevVideos, ...Object.values(snapshot.val())]);
-          // console.log('snapshot', Object.values(snapshot));
         } else {
           setHasMore(false);
         }
       } catch (err) {
-        // console.log('err', err);
         setLoading(false);
         setError(true);
       }
