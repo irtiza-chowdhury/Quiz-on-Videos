@@ -25,6 +25,9 @@ export default function SignupForm() {
     e.preventDefault();
 
     // validation
+    if (password.length < 8) {
+      return setError('Password must be at least 8 characters or numbers');
+    }
     if (password !== confirmPassword) {
       return setError('Password does not match');
     }
@@ -80,10 +83,10 @@ export default function SignupForm() {
         value={agree}
         onChange={(e) => setAgree(e.target.value)}
       />
-      {error && <p className="error">{error}</p>}
       <Button disabled={loading} type="submit">
         <span>Submit Now</span>
       </Button>
+      {error && <p className="error">{error}</p>}
       <div className="info">
         Already have an account? <Link to="/login">Login</Link> instead.
       </div>
